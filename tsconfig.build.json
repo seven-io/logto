@@ -1,0 +1,5 @@
+{
+  "exclude": ["src/**/*.test.ts"],
+  "extends": "./tsconfig.base",
+  "include": ["src"]
+}

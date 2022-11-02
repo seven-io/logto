@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "types": ["node", "jest"]
+  },
+  "extends": "./tsconfig.base",
+  "include": ["src", "jest.config.ts"]
+}

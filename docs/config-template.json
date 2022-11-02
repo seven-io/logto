@@ -1,0 +1,18 @@
+{
+  "apiKey": "<api-key>",
+  "from": "<from>",
+  "templates": [
+    {
+      "content": "This is for sign-in purposes only. Your passcode is {{code}}.",
+      "usageType": "SignIn"
+    },
+    {
+      "content": "This is for registering purposes only. Your passcode is {{code}}.",
+      "usageType": "Register"
+    },
+    {
+      "content": "This is for testing purposes only. Your passcode is {{code}}.",
+      "usageType": "Test"
+    }
+  ]
+}
