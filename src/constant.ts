@@ -1,6 +1,6 @@
 import type { ConnectorMetadata } from '@logto/connector-kit';
 
-export const endpoint = 'https://gateway.sms77.io/api/sms';
+export const endpoint = 'https://gateway.seven.io/api/sms';
 
 export const defaultMetadata: ConnectorMetadata = {
   configTemplate: './docs/config-template.json',

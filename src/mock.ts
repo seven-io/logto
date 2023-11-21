@@ -1,4 +1,4 @@
-import type { SevenSmsConfig } from './types';
+import type { SevenSmsConfig } from './types.js';
 
 const mockedApiKey = 'api-key';
 const mockedFrom = 'from-messaging-service-sid';

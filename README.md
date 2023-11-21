@@ -1,3 +1,5 @@
+![](https://www.seven.io/wp-content/uploads/Logo.svg "seven Logo")
+
 # Seven short message service connector
 
 The official Logto connector for Seven short message service.
@@ -18,7 +20,7 @@ Create a new account on [seven](https://www.seven.io). (Jump to the next step if
 
 ## Get API key
 
-See the [helpdesk article](https://help.sms77.io/en/api-key-access) on how to retrieve your API key.
+See the [helpdesk article](https://help.seven.io/en/api-key-access) on how to retrieve your API key.
 
 ## Compose the connector JSON
 
@@ -66,11 +68,11 @@ That's it. Don't forget to [Enable connector in sign-in experience](https://docs
 | from      | string      |
 | templates | Templates[] |
 
-| Template Properties | Type        | Enum values                     |
-|---------------------|-------------|---------------------------------|
-| content             | string      | N/A                             |
+| Template Properties | Type        | Enum values                    |
+|---------------------|-------------|--------------------------------|
+| content             | string      | N/A                            |
 | usageType           | enum string | 'Register' \ 'SignIn' \ 'Test' |
 
 ## Error codes
 
-- [seven - error codes](https://www.sms77.io/en/docs/gateway/http-api/sms-dispatch/#return)
+- [seven - error codes](https://www.seven.io/en/docs/gateway/http-api/sms-dispatch/#return)

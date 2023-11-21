@@ -10,13 +10,11 @@ import {
   validateConfig,
   ConnectorType,
 } from '@logto/connector-kit';
+import SevenClient, { type SmsParams } from '@seven.io/api';
 import { assert } from '@silverhand/essentials';
-import type { SmsParams } from 'sms77-client';
-import Sms77Client from 'sms77-client';
 
-import { defaultMetadata } from './constant';
-import type { SevenSmsConfig } from './types';
-import { sevenSmsConfigGuard } from './types';
+import { defaultMetadata } from './constant.js';
+import { type SevenSmsConfig, sevenSmsConfigGuard } from './types.js';
 
 const sendMessage =
   (getConfig: GetConnectorConfig): SendMessageFunction =>
@@ -37,11 +35,12 @@ const sendMessage =
 
     const text =
       typeof payload.code === 'string'
-        ? template.content.replace(/{{code}}/g, payload.code)
+        ? template.content.replaceAll('{{code}}', payload.code)
         : template.content;
 
     try {
-      const client = new Sms77Client(apiKey, 'Logto');
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
+      const client: SevenClient.default = new SevenClient.Sms77Client(apiKey, 'Logto');
       const smsParameters: SmsParams = {
         from,
         json: true,
@@ -49,7 +48,8 @@ const sendMessage =
         to,
       };
 
-      return await client.sms(smsParameters);
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-return
+      return client.sms(smsParameters);
     } catch (error: unknown) {
       if (error instanceof Error) {
         throw new ConnectorError(ConnectorErrorCodes.General, error.message);

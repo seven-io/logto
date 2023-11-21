@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 /**
- * @doc https://www.sms77.io/en/docs/gateway/http-api/sms-dispatch/
+ * @doc https://www.seven.io/en/docs/gateway/http-api/sms-dispatch/
  *
  * @doc https://en.wikipedia.org/wiki/E.164
  */
