@@ -75,4 +75,5 @@ That's it. Don't forget to [Enable connector in sign-in experience](https://docs
 
 ## Error codes
 
-- [seven - error codes](https://www.seven.io/en/docs/gateway/http-api/sms-dispatch/#return)
+- [seven - error codes](https://docs.seven.io/en/rest-api/endpoints/sms#return-codes)
+
